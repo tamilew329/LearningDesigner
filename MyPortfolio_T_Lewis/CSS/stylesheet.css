@@ -1,0 +1,468 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Madurai', sans-serif;
+    
+}
+
+:root{
+
+    --primary-color:#E49AB0;
+    --secondary-color:#904C77;
+    --terciary-color:rgb(225, 221, 143);
+    --quartenary-color:#4BA3C3;
+    --quinary-color: #718f94;
+    
+}
+
+.nav-container{
+    background-image:linear-gradient(35deg, var(--quinary-color), var(--terciary-color));
+    height: 60px;
+    width: 100vw;
+    display:grid;
+    align-items: center;
+    grid-template-areas: 
+    "logo logo logo logo menu1 menu2 menu3 menu4";
+    position:fixed;
+    z-index: 1000;
+}
+
+.nav-container a{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--quartenary-color);
+}
+.logo-container-nav{
+
+    grid-area: logo;
+}
+.top-logo{
+    height: 65px;
+    
+}
+.menu-text{
+    text-transform: uppercase;
+}
+.menu-1{
+    grid-area: menu1;
+    
+
+}
+.menu-2{
+    grid-area: menu2;
+
+}
+.menu-3{
+    grid-area: menu3;
+
+
+}
+.menu-4{
+    grid-area: menu4;
+    
+
+}
+.photo-slider-container{
+    background-image: url(/Media/stainedglass.png);
+    background-repeat: none;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    color: var(--terciary-color);display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+
+.showcase{
+    width:90vw;
+    padding:30px 50px;
+    background-image:linear-gradient(65deg, var(--quartenary-color), var(--secondary-color));
+    border-radius: 20px;
+    box-shadow: 0 0 18px 0 var(--terciary-color);
+    opacity: .85;
+    line-height: 2.5rem;
+    background: cover;
+    
+      
+}
+.showcase-button{
+    text-align: center;
+   
+}
+.photo-slider-container button{
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-size: 20px;
+    border: none;
+    color: var(--quinary-color);
+    background-color: var(--terciary-color);
+    font-weight: bold;
+    border-radius: 20px;
+}
+.showcase h1{
+    font-size: 40px;
+    text-align: center;
+
+
+}
+
+.showcase p{
+    font-size: 20px;
+    line-height: 1.5rem;
+    color: var(--terciary-color);
+    text-align:justify;
+}
+.portf-container{
+    display: grid;
+    background-image: linear-gradient(85deg,var(--quinary-color), var(--secondary-color));
+    height: 100%;
+    width: 100vw;
+    place-items: center center;
+
+
+}
+.portf-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+
+}
+.card:nth-child(even){
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+.card:nth-child(odd){
+    background-color: var(--terciary-color);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(6,6,6,0.7);
+}
+
+.img-container:nth-child(even){
+    position:relative;
+    clip-path: polygon(0 0,100% %,0100% 85%, 0 100%);
+}
+.img-container:nth-child(odd){
+    position:relative;
+    clip-path: polygon(0 0,100% 0,100% 85%, 0 100%);
+}
+.portf-container img{
+    width: 100%;
+    display:block;
+    border-radius: 20px 20px 0 0;
+}
+
+.img-container:after{
+    content:"";
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 10px 20px 0 0;
+    opacity: .3;
+
+}
+.card1>.img-container:after{
+    background-image:linear-gradient(185deg,var(--quinary-color), var(--primary-color));
+}
+.card2>.img-container:after{
+    background-image:linear-gradient(85deg,var(--quinary-color), var(--quartenary-color));
+}
+.card3>.img-container:after{
+    background-image:linear-gradient(85deg,var(--quinary-color), var(--quartenary-color));
+}
+.card4>.img-container:after{
+    background-image:linear-gradient(185deg,var(--terciary-color), var(--quartenary-color));
+}
+
+.details{
+    padding: 20px 10px;
+
+}
+.details h2{
+    color: var(--quartenary-color);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 10px 0 15px 0;
+    text-transform: uppercase;
+    text-align: center;
+
+
+}
+.details p{
+    color: var(--quinary-color);
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    text-align: justify;
+    padding: 15px;
+}
+
+.e-learning-samples{
+    grid-area: elearning;
+    align-self: center;
+   
+    
+}
+.video-samples{
+    grid-area: video;
+    align-self: center;
+    
+}
+.website-samples{
+    grid-area: website;
+    align-self: center;
+   
+}
+.audio-samples{
+    grid-area: audio;
+    align-self: center;
+ 
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    padding: 20px;
+    grid-gap: 40px;
+    place-items: center center;
+    width: 100vw;
+    background-image:linear-gradient(15deg, var(--terciary-color), var(--quinary-color))
+    /*  height: 800px;
+    width: 100vw;
+    display: grid;
+    grid-template-areas: "photo photo"
+     "text text";
+     place-items: center;
+     ;*/
+}
+.about-img{
+    height: 450px;
+    border-radius: 50%;
+    border: var(--secondary-color) double 3px;
+    padding: 14px;
+    /*width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: var(--secondary-color) double 3px;
+    padding: 14px;
+    grid-area:photo;
+    align-self: center;*/
+
+}
+.about-text-container{
+    padding: 15px 25px;
+    background-color:rgba(225,221,143,.6);
+    border-radius: 20px;
+    */
+}
+.about-text-container h2{
+    color: var(--secondary-color);
+    font-size: 22px;
+    text-align: center;
+}
+
+.about-text-container p{
+    color: var(--quartenary-color);
+    font-size: 18px;
+    text-align: justify;
+    
+}
+
+.contact-info{
+   /* background-color:lightcoral;*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Media/stainedglass.png);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    color: var(--terciary-color);
+}
+
+.contact-info .form-container{
+    padding: 50px 70px;
+    background-image:linear-gradient(65deg, var(--quartenary-color), var(--secondary-color));
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 var(--terciary-color);
+    
+}
+::placeholder {
+    color: var(--primary-color);
+    opacity: 1;
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact-info .form-container .heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.contact-info .form-container .input-box  input{
+
+background: transparent;
+width: 100%;
+border:none;
+border-bottom: 2px solid var(--quartenary-color);
+color: var(--terciary-color);
+margin-bottom:20px;
+font-size: 12px;
+padding: 4px 0px 4px 25px;
+height: 30px;
+transition: 0.8s all;
+
+}
+.contact-info .form-container .input-box  textarea{
+
+    background: transparent;
+    width: 100%;
+    border:none;
+    border-bottom: 2px solid var(--quartenary-color);
+    color: var(--terciary-color);
+    margin-bottom:20px;
+    font-size: 12px;
+    padding: 4px 0px 4px 25px;
+    transition: 0.8s all;
+    
+}
+.contact-info .form-container .input-box input:focus,
+.contact-info .form-container .input-box textarea:focus{
+        outline: none;
+        border-color: var(--quinary);
+        
+        
+}
+.contact-info .form-container .input-box {
+    position: relative;
+}
+
+.contact-info .form-container .input-box .icon{
+    position:absolute;
+    height: 30px;
+    line-height: 30px;
+}
+
+.contact-info .form-container .submit button{
+    border: none;
+    outline: none;
+    width: 100%;
+    background: var(--terciary-color);
+    color: var(--quinary-color);
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footnote-container{
+   /* background-color: aquamarine;*/
+    height: 70px;
+    width: 100vw;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "logoftr smicons copyright";
+    background-image:linear-gradient(25deg, var(--quinary-color), var(--terciary-color));
+}
+.fa-brands{
+    color:var(--quartenary-color);
+}
+.smicons-container{
+    grid-area: smicons;
+   /* background-color: lightpink;*/
+}
+.logo-container-ftr{
+    grid-area: logoftr;
+   /* background-color: lightpink;*/
+}
+.copyright-info{
+    grid-area: copyright;
+   /* background-color: lightpink;*/
+}
+
+.smicons-container, .logo-container-ftr, .logo-container-ftr, .copyright-info{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    
+}
+.copyright-info h3{
+    color: var(--quartenary-color);text-align: center;
+    font-size: 14px;
+}
+
+/*@media screen and (min-width: 850px){
+     
+     
+    .portfolio-container{
+    height:325px;
+    grid-template-areas: 
+    "elearning video website audio";
+   }
+   .portfolio-img{
+    max-width:  2000px;
+    height: 280px;
+    border-radius: 5%;
+    margin: 2.5%;
+    margin-top: 7%;
+   
+}
+    .about-img{
+   
+    max-width: 1000px;
+    height: 450px;
+    border-radius: 50%;
+    border: var(--secondary-color) double 3px;
+    padding: 14px;
+    }
+    .about-text-container h2{
+        font-size: 28px;
+    }
+    
+    .about-text-container p{
+    font-size: 20px;
+    margin-left: 10px;
+    width: 60vw;
+    
+}
+}
+@media screen and (min-width: 540px){
+   /* .portfolio-container{
+         height: 650px;
+         display: grid;
+         grid-gap: 10px;
+         grid-template-areas: 
+         "elearning video"
+         "website audio";
+         align-self: center;*/
+     /*    
+     }
+     .about-img{
+         width: 350px;
+         height: 350px;
+         border-radius: 50%;
+    border: var(--secondary-color) double 3px;
+    padding: 14px;
+     }
+     .about-container{
+         height: 490px;
+         width: 100vw;
+         display: grid;
+         grid-template-areas: "photo photo text text text";
+         text-align: justify;
+     }
+}*/
