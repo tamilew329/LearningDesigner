@@ -77,7 +77,7 @@
 }
 
 .showcase{
-    width:90vw;
+    width:100vw;
     padding:30px 50px;
     background-image:linear-gradient(65deg, var(--quartenary-color), var(--secondary-color));
     border-radius: 20px;
@@ -85,7 +85,6 @@
     opacity: .85;
     line-height: 2.5rem;
     background: cover;
-    
       
 }
 .showcase-button{
@@ -228,7 +227,7 @@
 }
 .about-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     padding: 20px;
     grid-gap: 40px;
     place-items: center center;
@@ -243,6 +242,7 @@
      ;*/
 }
 .about-img{
+    
     height: 450px;
     border-radius: 50%;
     border: var(--secondary-color) double 3px;
@@ -257,10 +257,11 @@
 
 }
 .about-text-container{
+    display: grid;
     padding: 15px 25px;
     background-color:rgba(225,221,143,.6);
     border-radius: 20px;
-    */
+    margin-left: 40px;
 }
 .about-text-container h2{
     color: var(--secondary-color);
@@ -280,7 +281,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Media/stainedglass.png);
     background-repeat: none;
@@ -404,65 +405,3 @@ transition: 0.8s all;
     color: var(--quartenary-color);text-align: center;
     font-size: 14px;
 }
-
-/*@media screen and (min-width: 850px){
-     
-     
-    .portfolio-container{
-    height:325px;
-    grid-template-areas: 
-    "elearning video website audio";
-   }
-   .portfolio-img{
-    max-width:  2000px;
-    height: 280px;
-    border-radius: 5%;
-    margin: 2.5%;
-    margin-top: 7%;
-   
-}
-    .about-img{
-   
-    max-width: 1000px;
-    height: 450px;
-    border-radius: 50%;
-    border: var(--secondary-color) double 3px;
-    padding: 14px;
-    }
-    .about-text-container h2{
-        font-size: 28px;
-    }
-    
-    .about-text-container p{
-    font-size: 20px;
-    margin-left: 10px;
-    width: 60vw;
-    
-}
-}
-@media screen and (min-width: 540px){
-   /* .portfolio-container{
-         height: 650px;
-         display: grid;
-         grid-gap: 10px;
-         grid-template-areas: 
-         "elearning video"
-         "website audio";
-         align-self: center;*/
-     /*    
-     }
-     .about-img{
-         width: 350px;
-         height: 350px;
-         border-radius: 50%;
-    border: var(--secondary-color) double 3px;
-    padding: 14px;
-     }
-     .about-container{
-         height: 490px;
-         width: 100vw;
-         display: grid;
-         grid-template-areas: "photo photo text text text";
-         text-align: justify;
-     }
-}*/
